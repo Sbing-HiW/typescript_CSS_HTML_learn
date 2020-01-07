@@ -1,0 +1,412 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="jq4.css">
+<title>插播:jQuery实施方案</title>
+<script src="../jquery-1.3.2-vsdoc2.js"></script>
+<script src="jq4.js"></script>
+</head>
+<body>
+    
+<!-- 弹出框案例 -->
+<!-- <script type="text/javascript" src="../scripts/jquery-1.3.2-vsdoc2.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        //动画速度
+        var speed = 500;
+
+        //绑定事件处理
+        $("#btnShow").click(function(event)
+        {
+            //取消事件冒泡
+            event.stopPropagation();
+            //设置弹出层位置
+            var offset = $(event.target).offset();
+            $("#divPop").css({ top: offset.top + $(event.target).height() + "px", left: offset.left });
+            //动画显示
+            $("#divPop").show(speed);
+
+        });
+        //单击空白区域隐藏弹出层
+        $(document).click(function(event) { $("#divPop").hide(speed) });
+        //单击弹出层则自身隐藏
+        $("#divPop").click(function(event) { $("#divPop").hide(speed) });
+    });
+</script> -->
+<!-- <div>
+        <br /><br /><br />
+        <button id="btnShow">显示提示文字</button>
+    </div>
+        
+    
+    <div id="divPop" style="background-color: #f0f0f0; border: solid 1px #000000; position: absolute; display:none;
+        width: 300px; height: 100px;">
+        <div style="text-align: center;">弹出层</div>
+    </div> -->
+
+
+
+
+<!-- 基本动画函数 -->
+<!-- 滑动动画 -->
+<!-- 淡入淡出动画 -->
+    <!-- <p>段落1</p> -->
+
+<!-- 实例 -->
+<!-- <div>
+            <br /><br /><br />
+            <button id="btnShow">提示文字</button>
+   </div>
+<div id="divPop" style="background-color: #f0f0f0; border: solid 1px #000000; position: absolute; display:none;
+width: 300px; height: 100px;">
+<div style="text-align: center;">弹出层</div>
+</div> -->
+
+
+<!-- 基本动画函数 -->
+<!-- <script>
+// 基本动画函数
+
+// show() 
+
+// 显示隐藏的匹配元素。
+
+// 显示所有段落
+$("p").show();
+
+
+
+
+// hide( )
+
+// 隐藏显示的元素
+
+// 隐藏所有段落:
+$("p").hide();
+
+
+
+
+// show( speed, [callback])	
+
+// 以优雅的动画显示所有匹配的元素，并在显示完成后可选地触发一个回调函数。
+
+// 用缓慢的动画将隐藏的段落显示出来，历时600毫秒:
+$("p").show(600);
+
+
+
+
+
+// hide( speed, [callback] )
+
+// 以优雅的动画隐藏所有匹配的元素，并在显示完成后可选地触发一个回调函数。
+
+// 用600毫秒的时间将段落缓慢的隐藏:
+$("p").hide("slow");
+
+
+
+
+// toggle( )
+
+// 切换元素的可见状态。 
+// 如果元素是可见的，切换为隐藏的；如果元素是隐藏的，切换为可见的。.
+
+// 切换所有段落的可见状态:
+$("p").toggle();
+
+
+
+
+
+// toggle( switch )
+
+// 根据switch参数切换元素的可见状态（ture为可见，false为隐藏）。
+
+// 切换所有段落的可见状态:
+var flip = 0;
+$("button").click(function () {
+   $("p").toggle( flip++ % 2 == 0 );
+});
+
+
+
+// toggle( speed, [callback] )
+
+// 以优雅的动画切换所有匹配的元素，并在显示完成后可选地触发一个回调函数。
+
+// 用200毫秒将段落迅速切换显示状态，之后弹出一个对话框:
+$("p").toggle("fast",function(){
+   alert("Animation Done.");
+ });
+
+
+</script> -->
+
+
+<!-- 实例-改 -->
+<!-- <script>
+// 事件修改
+$(document).ready(function()
+        {
+            //动画速度
+            var speed = 500;
+
+            //绑定事件处理
+            $("#btnShow").click(function(event)
+            {
+                //取消事件冒泡
+                event.stopPropagation();
+                //设置弹出层位置
+                var offset = $(event.target).offset();
+                $("#divPop").css({ top: offset.top + $(event.target).height() + "px", left: offset.left });
+                //切换弹出层的显示状态
+                $("#divPop").toggle(speed);
+
+            });
+        });
+
+</script> -->
+
+
+<!-- 滑动动画函数 -->
+<!-- <script>
+
+// slideDown(speed, [callback])
+
+// 通过高度变化（向下增大）来动态地显示所有匹配的元素，在显示完成后可选地触发一个回调函数。
+
+// 用600毫秒缓慢的将段落滑下:
+$("p").hide();
+$("p").slideDown("fast");
+
+
+
+
+
+// slideUp(speed, [callback])
+
+// 通过高度变化（向上减小）来动态地隐藏所有匹配的元素，在隐藏完成后可选地触发一个回调函数。
+
+// 用600毫秒缓慢的将段落滑上:
+$("p").show();
+$("p").slideUp("fast");
+
+
+
+
+// slideToggle(speed, [callback])
+
+// 通过高度变化来切换所有匹配元素的可见性，并在切换完成后可选地触发一个回调函数
+
+// 用600毫秒缓慢的将段落滑上或滑下:
+$("p").slideToggle("fast");
+
+
+
+
+
+</script> -->
+
+
+<!-- 淡入淡出动画函数 -->
+<!-- <script>
+
+//  fadeIn( speed, [callback] )
+
+// 通过不透明度的变化来实现所有匹配元素的淡入效果，并在动画完成后可选地触发一个回调函数。
+
+// 用600毫秒缓慢的将段落淡入:
+// $("p").fadeIn("slow");
+
+
+
+
+
+// fadeOut( speed, [callback] )
+
+// 通过不透明度的变化来实现所有匹配元素的淡出效果，并在动画完成后可选地触发一个回调函数。
+
+// 用600毫秒缓慢的将段落淡出:
+// $("p").fadeOut("slow");
+
+
+
+
+// fadeTo(speed, opacity, [callback])
+
+// 把所有匹配元素的不透明度以渐进方式调整到指定的不透明度，并在动画完成后可选地触发一个回调函数。
+
+// 用600毫秒缓慢的将段落的透明度调整到0.66，大约2/3的可见度:
+$("p").fadeTo("slow", 0.66);$("p").fadeTo("slow", 0.66);
+
+
+//设置弹出层的透明度
+$("#divPop").fadeTo(0, 0.66);
+
+//让弹出层透明显示
+if ($("#divPop").css("display") == "none")
+{
+    $("#divPop").fadeIn(speed);
+}
+else
+{
+    $("#divPop").fadeOut(speed);
+}
+</script> -->
+
+
+
+<!-- <div id="go">自定义1
+    <div id="block">自定义2</div>
+</div>
+
+<div id="go1">自定义1-1
+        <div id="block1">自定义2-2</div>
+</div> -->
+
+
+
+<!-- 自定义动画函数 -->
+<!-- <script>
+
+//  animate( params, [duration], [easing], [callback]  )
+
+// 用于创建自定义动画的函数。指定动画形式及结果样式属性对象。
+// 这个对象中每个属性都表示一个可以变化的样式属性（如“height”、“top”或“opacity”）。
+// 注意：所有指定的属性必须用骆驼形式，比如用marginLeft代替margin-left.
+// 而每个属性的值表示这个样式属性到多少时动画结束。如果是一个数值，样式属性就会从当前的值渐变到指定的值。
+// 如果使用的是“hide”、“show”或“toggle”这样的字符串值，则会为该属性调用默认的动画形式。
+// 在 jQuery 1.2 中，你可以使用 em 和 % 单位。另外，在 jQuery 1.2 中，你可以通过在属性值前面指定 "+=" 或 "-=" 来让元素做相对运动。
+// jQuery 1.3中，如果duration设为0则直接完成动画。而在以前版本中则会执行默认动画。
+
+// 点击按钮后div元素的几个不同属性一同变化:
+// 在一个动画中同时应用三种类型的效果
+$("#go").click(function(){
+$("#block").animate({
+  width: "90%",
+  height: "100%",
+  fontSize: "10em",
+  borderWidth: 10
+}, 1000 );
+});
+
+
+
+// animate( params, options )
+
+// 这个函数的关键在于指定动画形式及结果样式属性对象。这个对象中每个属性都表示一个可以变化的样式属性（如“height”、“top”或“opacity”）。
+// 注意：所有指定的属性必须用骆驼形式，比如用marginLeft代替margin-left.
+// 而每个属性的值表示这个样式属性到多少时动画结束。如果是一个数值，样式属性就会从当前的值渐变到指定的值。
+// 如果使用的是“hide”、“show”或“toggle”这样的字符串值，则会为该属性调用默认的动画形式。
+// 在 jQuery 1.2 中，你可以使用 em 和 % 单位。另外，在 jQuery 1.2 中，你可以通过在属性值前面指定 "+=" 或 "-=" 来让元素做相对运动。
+
+// 第一个按钮按了之后展示了不在队列中的动画。在div扩展到90%的同时也在增加字体，一旦字体改变完毕后，边框的动画才开始:
+
+$("#go1").click(function(){ $("#block1").animate( { width: "90%"}, { queue: false, duration: 5000 } ) .animate( { fontSize: '10em' } , 1000 ) .animate( { borderWidth: 5 }, 1000); }); $("#go2").click(function(){ $("#block2").animate( { width: "90%"}, 1000 ) .animate( { fontSize: '10em' } , 1000 ) .animate( { borderWidth: 5 }, 1000); });
+
+
+
+
+
+
+
+// stop( [clearQueue], [gotoEnd] )
+
+// 停止所有在指定元素上正在运行的动画。
+// 如果队列中有等待执行的动画(并且clearQueue没有设为true)，他们将被马上执行
+// clearQueue(Boolean):如果设置成true，则清空队列。可以立即结束动画。
+// gotoEnd (Boolean):让当前正在执行的动画立即完成，并且重设show和hide的原始样式，调用回调函数等
+
+// 点击Go之后开始动画,点Stop之后会在当前位置停下来:
+
+// 开始动画
+$("#go").click(function(){
+  $(".block").animate({left: '+200px'}, 5000);
+});
+
+// 当点击按钮后停止动画
+$("#stop").click(function(){
+  $(".block").stop();
+});
+
+
+
+
+
+
+</script> -->
+
+
+
+
+<!-- 自定义坠落动画 -->
+<!-- <div id="divPop" style="background-color: #f0f0f0; border: solid 1px #000000; 
+width: 300px; height: 100px; position:absolute;">
+<div style="text-align: center;">弹出层</div>
+</div>
+<script>
+$(document).ready(function()
+        {
+            $("#divPop")
+            .animate(
+            {
+                "opacity": "hide",
+                "top": $(window).height() - $("#divPop").height() - $("#divPop").position().top
+            },
+            600,
+            function() { $("#divPop").hide(); }
+            );
+        });
+
+
+
+</script> -->
+
+
+
+<!-- 自定义消散图片 -->
+<!-- <div id="divPop" style="background-color: #f0f0f0; border: solid 1px #000000; 
+        width: 300px; height: 100px; position:absolute;">
+        <div style="text-align: center;">弹出层</div>
+    </div>
+<script>
+ $(document).ready(function()
+        {
+            $("#divPop")
+            .animate(
+            {
+                "opacity": "hide",
+                "width": $(window).width()-100 ,
+                "height": $(window).height()-100
+            },
+            500
+            );
+        });
+</script> -->
+
+
+
+<!-- 全局控制属性 -->
+<!-- <script>
+// jQuery.fx.off
+
+// 关闭页面上所有的动画。
+
+jQuery.fx.off = true;
+$("#divPop").show(1000);
+
+
+</script> -->
+
+
+
+
+
+</body>
+</html>

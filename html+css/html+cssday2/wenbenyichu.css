@@ -1,0 +1,89 @@
+*{
+    /* 初始化 */
+    margin: 0; 
+    padding: 0;
+    /* 初始化字体颜色 */
+    color: black;
+    /* 初始化字体样式 */
+    font-family: Arial;
+}
+
+/* 
+单行打点三件套
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis; 
+*/
+
+
+/* 单行打点 */
+
+p{
+    width: 300px;
+    height: 20px;
+    line-height: 20px; 
+    border: 1px solid black;
+    /* 单行打点三件套 */
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+
+/* 多行一般采用截断 */
+p{
+
+    width: 300px;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+
+/* div{ */
+    /* width: 200px; */
+    /* height: 200px; */
+    /* border: 1px solid black; */
+    /* 背景图片 */
+    /* background-image: url(233.png); */
+    /* 图片大小 */
+    /* background-size: 100px 100px; */
+    /* 平铺 */
+    /* background-repeat: no-repeat; */
+    /* 图片位置 */
+    /* background-position: 50% 50%; */
+
+/* } */
+
+.one a{
+    display: inline-block;
+    color: brown;
+    text-decoration: none;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-image: url(233.png);
+    background-size: 100px 100px;
+    
+    /* 第一种解决方案 */
+    text-indent: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.two a{
+    margin-top :100px; 
+
+    /* 第二种解决方案 */
+    display: inline-block;
+    color: brown;
+    text-decoration: none;
+    width: 100px;
+    height: 0;
+    padding-top :100px;
+    overflow: hidden;
+    border: 1px solid rgb(0, 0, 0);
+    background-image: url(233.png);
+    background-size: 100px 100px;
+}

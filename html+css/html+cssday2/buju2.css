@@ -1,0 +1,69 @@
+
+*{
+    /* 初始化 */
+    margin: 0; 
+    padding: 0;
+    /* 初始化字体颜色 */
+    color: black;
+    /* 初始化字体样式 */
+    font-family: Arial;
+}
+.nav{
+margin: 10px;
+    /* 初始化导航栏样式 去掉圆点 */
+    list-style: none;
+}
+.nav::after{
+    /* 消除浮动流 */
+
+    /* 伪元素 */
+    content: "";
+    /* 转为块级元素 */
+    display: block;
+    /* 清除浮动流 */
+    clear: both;
+}
+a{
+    /* 去除底划线 */
+    text-decoration: none;
+}
+
+/* 伪元素 天生inline （行级元素） */
+/* span::before{
+    display: block;
+    content: "1";
+}
+span::after{
+    content: "2"; 
+} */
+
+/* 父子选择器 */
+.nav .list-item{
+    /* 转化为浮动元素 成一行 */
+    float: left;
+    /* 设置行间距 */
+    margin: 0 10px;
+    /* 设置居中 */
+    height: 30px;
+    line-height: 30px;
+    /* border: 1px solid black; */
+  
+}  
+.nav .list-item a{
+    /* 扩边 */
+    padding: 0 5px;
+    /* 设置底提颜色 */
+    color: #f40;
+    /* 加粗 */
+    font-weight: bold;
+    height: 30px;
+    /* 转化为行级快元素 */
+    display: inline-block;
+    /* 设置圆角 */
+    border-radius: 15px;  
+}
+/* 这是颜色反转 */
+.nav .list-item a:hover{
+    color: #fff;
+    background-color: #f40;
+  }

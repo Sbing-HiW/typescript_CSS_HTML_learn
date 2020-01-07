@@ -1,0 +1,33 @@
+#only{
+    background-color: aquamarine;
+}
+#only2{
+    background-color:red;
+}
+.dome{
+    background-color:yellow;
+}
+.dome1{
+    color: aqua;
+}
+div{
+    color: blueviolet;
+}
+span{
+    background-color: brown
+}
+*{
+    background-color: aquamarine;
+}
+[class]{
+ background-color: bisque
+}
+
+/* 256进制  权重
+
+!important  infinity
+行间样           1000
+id              100
+class|属性|伪类   10
+标签|伪元素        1
+通配符             0 */

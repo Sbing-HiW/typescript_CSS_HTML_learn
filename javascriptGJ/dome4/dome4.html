@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="dome4.css">
+<script src="dome4.js"></script>
+<title>dome4-document</title>
+</head>
+<body>
+    <!-- document 属性 -->
+
+    <!-- name 属性 -->
+    <form  name = “f1” method="post">
+            <input type="button" value="1">
+    </form>
+<!-- document 方法和属性 -->
+    <script>
+        // document方法
+        // 把文本附加到当前打开的文档
+    // document.write();
+        // 关闭或者结束open()方法的文档 
+    // document.close();
+        // 产生一个新文档，擦去已有的文档内容
+    // document.open();
+        // 把文本输出到当前打开的文档，并附加一个换行符
+    // document.writeln();
+    
+
+        // document属性
+        // linkColor,vlinkColor,alinkColor 描述超级链接的颜色
+        // 未被访问过的链接的正常颜色 
+    // document.linkColor
+        // 被访问过的链接的正常颜色
+    // document.vlinkColor
+        // 被激活的链接的颜色
+    // document.alinkColor
+        // 对于<body>的属性  link,vlink,alink
+
+    // anchor对象的一个数组，该对象代表文档中的锚
+    // document.anchors
+
+    // applet对象的一个数组，该对象表示文档中的java小程序
+    // document.applets
+    
+    // bgcolor,fgcolor 背景和文本颜色 <body>为  body和text
+    // document.bgColor;  document.fgColor
+    
+    // 允许js程序读写HTTP cookie。
+    // document.cookie
+    
+    // formsp[] form对象的一个数组，代表文档中的<form>元素
+    // document.forms[0]; //表单在文档中的位置来引用它
+    // document.f1; //用名字引用表单
+    // document.forms['f1']; //使用数组语法引用表单
+    // document.forms.f1; //使用属性语法引用表单
+    // document.write(document.forms[0],document.f1,document.forms['f1'],document.forms.f1)
+
+    // images[] image对象的一个数组，代表文档中的<img>元素
+    // document.images
+    
+    // domain 同一inernet域中相互信任web服务器在网页见交互时协同放松某项安全性限制
+    // document.domain
+    
+    // lastModified 一个字符串，包含文档的修改日期
+    // document.lastModified
+    
+    // links[] link对象的数组，超文本链接的link对象
+    // document.links
+     
+    // location 等价于url
+    // document.location
+    
+    // referrer  文档的url，包含把浏览器带到当前文档的链接
+    // document.referrer
+    
+    // title 位于文档的标记<title></title>之间的文本
+    // document.title
+    
+    // URL 一个字符串，声明了装在文档的url,于window对象的属性 location.href相同
+    // document.URL
+    </script>
+<!-- 生成和关闭文档 -->
+    <script>
+    // parent.frames[1].document.open();
+    // parent.frames[1].document.write('<hr>hello</hr>');
+    // parent.frames[1].document.close();
+    </script>
+<!--对话窗口的动态创建 -->
+<!-- <script>
+   var  error_count = 0;
+   var  email = 'sb40120103@gmail.com';
+
+   function report_error(msg , url , line){
+       var  w = window.open(
+           "",
+           "'error+error_count++",
+           "resizeable,status,width=625,height=400"
+       );
+       var d = w.document;
+       d.write('写入文档');
+       d.close();
+
+       return true;
+   }
+   self.onerror = report_error;
+    </script>
+    <script>
+    alert(no_scu);
+    </script> -->
+
+<!-- 纯文本调试输出窗口 -->
+<!-- <script>    
+var conslo = null;
+function debug(msg){
+    if((conslo == null)||(conslo.closed)){
+
+        conslo = window.open(
+            '',
+            'console',
+            'width=600,height=300,resizeable'
+        )
+        conslo.document.open('text/plain');
+    }
+    conslo.focus();
+
+    conslo.document.writeln(msg);
+
+}
+</script>
+<script> var n = 0;</script>
+<form>
+    <input type="button" value="push" onclick="debug(n+'times')">
+</form> -->
+
+<!-- 使用图像置换的方法的动画 -->
+<!-- <img name = "animation" src="233.png">
+
+<script>
+var animations = new Array(10);
+for( var i = 0;i < 10;i++){
+    animations[i] = new Image();
+    animations[i].src = "233.png";
+}
+var frame = 0;
+var timeout = null;
+function anmiate (){
+    document.animations.src = animations[frame].src;
+    frame = (frane + 1 )%10;
+    timeout = setTimeout('anmiate()',250);
+}
+</script>
+<form>
+<input type="button" value="start" onclick="if(timeout == null) anmiate ();">
+<input type="button" value="stop" onclick="if(timeout) clearTimeout(timeout);timeout=null;" >
+</form> -->
+
+
+<!-- <form name="" action="" method="post" target=""></form> -->
+
+
+<h1>An HTML Document</h1>
+<p>This is a <i>simple</i> document</p>
+
+</body>
+</html>

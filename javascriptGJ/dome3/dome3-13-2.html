@@ -1,0 +1,37 @@
+<html>
+    <head>
+
+        <meta cherset="utf-8">
+        <title>状态栏</title>
+
+        <script>
+            
+                function display_time(){
+                  
+                    var d = new Date(); //获取时间
+                    var h = d.getHours(); //获取小时
+                    var m = d.getMinutes(); //获取分钟
+                    var ampm = (h >= 12)?"PM":"AM";
+                    if (h > 12) h -= 12;
+                    if (h == 0)  h = 12;
+                    if (m < 10 )  m = "0"+m;
+                    var t = h + ":" + m + ":" + ampm ; 
+                    defaultStatus = t; 
+        
+                    setInterval("display_time()",60000);
+        
+                    document.write(t);
+                }
+                
+                </script>
+    </head>
+    <body> 
+       
+    <script>
+    display_time();
+    </script>
+
+
+
+    </body>
+</html>

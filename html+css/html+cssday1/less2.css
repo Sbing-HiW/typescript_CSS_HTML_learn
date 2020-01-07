@@ -1,0 +1,83 @@
+/* 256进制  权重
+
+!important  infinity 
+行间样           1000
+id              100
+class|属性|伪类   10
+标签|伪元素        1
+通配符             0 */
+
+/* 父子选择器 /派生*/
+/* div span{
+    background-color:rebeccapurple;
+}
+
+#in .im em{
+    background-color:black
+} */
+
+/* 直接子元素选择器 */
+/* div > em {
+    background-color: chartreuse
+} */
+
+section div ul li a em {
+    background-color: aqua;
+}
+
+/* 并列选择器 */
+div.dome{
+    background-color: coral;
+}
+
+/* 分组选择器 */
+em,
+strong,
+span
+{
+background-color: aliceblue
+}
+
+/* css代码块 */
+
+.div{
+    font-size: 16px; /*字体大小  高 */
+    font-weight: bold; /*字体粗细*/
+    font-style: italic; /*斜体*/
+    font-family: Arial;/*字体样式*/
+    color:#ff300b; /*1.纯英文单词2.颜色代码3.颜色函数*/
+    width: 0px;
+    height: 0px;
+    border:100px solid blue; /*符合属性*/
+    border-left-color: #ff300b;
+    border-top-color:#251111;
+    border-right-color:transparent;
+
+    border: 1px solid black;
+    text-align: left;
+    height: 100px;
+    line-height: 100px;
+    text-indent: 2em;
+
+    /* 1 em = 1 *font-size; */
+}
+
+/* 伪类选择器 */
+/* a{
+    text-decoration: none;
+} */
+/* a:hover{ 
+    text-decoration: underline;
+    background-color: aquamarine;
+    color: bisque;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial;
+    border-radius: 10px
+
+
+} */
+
+/* 初始化标签 */
+
+

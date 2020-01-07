@@ -1,0 +1,58 @@
+<html>
+    <head>
+     <meta charset="utf-8">
+     <title>1-3例子-借贷支付金额计算器</title>
+     <link rel="stylesheet" href="dome1_1-3.css">
+     <script src="dome1_1-3.js"></script>
+    </head>
+    <body bgcolor="white">
+        
+        <!-- <p>贷款金额</p> -->
+        <!-- <p>年利率百分比</p> -->
+        <!-- <p>还款期限</p> -->
+        <!-- <p>付款信息</p> -->
+        <!-- <p>您的每月付款将是</p> -->
+        <!-- <p>您的总付款将是</p> -->
+        <!-- <p>您的利息总额将是</p> -->
+        
+        <form name="loandata">
+            <table>
+                <tr> 
+                    <td><b>输入贷款信息:</b></td>       
+                </tr>
+                <tr>
+                   <td><p>1 贷款金额:</p></td>
+                   <td><input type="text" name="principal" onchange="calculate();"></td>
+                </tr>
+                <tr>
+                   <td><p>2 年利率百分比:</p></td>
+                   <td><input type="text" name="interest" onchange="calculate();"></td>
+                </tr>
+                <tr>
+                   <td><p>3 还款期限:</p></td>
+                   <td><input type="text" name="years" onchange="calculate();"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="计算" onchange="calculate();">
+                    </td>
+                </tr>
+                <tr>
+                  <td><b>付款信息:</b></td>
+                </tr>
+                <tr>
+                  <td><p>1 您的每月付款将是:</p></td>
+                  <td><input type="text" name="payment"></td>
+                </tr>
+                <tr>
+                  <td><p>2 您的总付款将是:</p></td>
+                  <td><input type="text" name="total" ></td>
+                </tr>
+                <tr>
+                  <td><p>3 您的利息总额将是:</p></td>
+                  <td><input type="text" name="totalinterest"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

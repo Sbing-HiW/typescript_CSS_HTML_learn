@@ -1,0 +1,122 @@
+<html>
+    <head>
+<meta charset="utf-8">
+<title>工具函数</title>
+<script src="jq5.js"></script>
+<script src="../jquery-1.3.2-vsdoc2.js"></script>
+<link rel="stylesheet" href="jq5.css">
+
+    </head>
+    <body>
+        
+    <script>
+    // 工具函数
+    // 在jQuery对象上定义的函数
+
+
+    // 工具函数分类
+
+        // 浏览器及特性检测
+        // 数组和对象操作  
+        // 测试操作 
+        // 字符串操作
+        // Url操作
+
+    
+    // 浏览器及特性检测
+
+    // jQuery.support
+
+    // 一组用于展示不同浏览器各自特性和bug的属性集合
+
+// boxModel: 如果这个页面和浏览器是以W3C CSS盒式模型来渲染的，则等于true。通常在IE 6和IE 7的怪癖模式中这个值是false。在document准备就绪前，这个值是null。
+
+// cssFloat: 如果用cssFloat来访问CSS的float的值，则返回true。目前在IE中会返回false,他用styleFloat代替。
+
+// hrefNormalized: 如果浏览器从getAttribute("href")返回的是原封不动的结果，则返回true。在IE中会返回false，因为他的URLs已经常规化了。
+
+// htmlSerialize: 如果浏览器通过innerHTML插入链接元素的时候会序列化这些链接，则返回true，目前IE中返回false。
+
+// leadingWhitespace: 如果在使用innerHTML的时候浏览器会保持前导空白字符，则返回true，目前在IE 6-8中返回false。
+
+// noCloneEvent: 如果浏览器在克隆元素的时候不会连同事件处理函数一起复制，则返回true，目前在IE中返回false。
+
+// objectAll: 如果在某个元素对象上执行getElementsByTagName("*")会返回所有子孙元素，则为true，目前在IE 7中为false。
+
+// opacity: 如果浏览器能适当解释透明度样式属性，则返回true，目前在IE中返回false，因为他用alpha滤镜代替。
+
+// scriptEval: 使用 appendChild/createTextNode 方法插入脚本代码时，浏览器是否执行脚本，目前在IE中返回false，IE使用 .text 方法插入脚本代码以执行。
+
+// style: 如果getAttribute("style")返回元素的行内样式，则为true。目前IE中为false，因为他用cssText代替。
+
+// tbody: 如果浏览器允许table元素不包含tbody元素，则返回true。目前在IE中会返回false，他会自动插入缺失的tbody。
+
+
+
+
+    </script>
+    <style type="text/css">
+    .boxModel
+    {
+        width:200px;
+        height:50px;
+        padding:10px;
+        border:solid 5px #FF0000;
+        background-color:#acacac;
+    }
+    </style>
+    <div id="divBox" class="boxModel">
+
+
+
+<!-- 数组和对象操作 -->
+<script>
+
+// 1 迭代
+// jQuery.each(object,callback);
+
+// 通用例遍方法，可用于例遍对象和数组。此方法可用于例遍任何对象。
+            
+        
+// 2 筛选 
+// jQuery.grep( array, callback, [invert] )
+
+// 使用过滤函数过滤数组元素。
+// 此函数至少传递两个参数：待过滤数组和过滤函数。
+// 过滤函数必须返回 true 以保留元素或 false 以删除元素。
+
+
+// 3 转换
+// jQuery.map( array, callback )
+
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+    </body>
+</html>

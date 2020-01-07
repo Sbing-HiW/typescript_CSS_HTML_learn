@@ -1,0 +1,64 @@
+<html lang="zh">
+<head>
+ <meta charset="utf-8">
+ <title>buju</title>
+ <link rel="stylesheet" type="text/css" href="buju.css">
+</head>
+<body>
+
+    <!-- 两栏布局 -->
+    <!-- <div class="right"></div>   -->
+    <!-- <div class="left"></div> -->
+
+
+    <!-- 两个bug -->
+    <!-- bfc解决 -->
+    <!-- 如何触发bfc 
+    1.postion.absolute   绝对定位
+    2.display:inline-block   显示为内联块元素
+    3.float:left/right   浮动
+    4.overflow:hidden   修剪 
+    
+    -->
+    <!-- 1.margin塌陷    父子结构垂直方向的margin联合一起取最大--> 
+         <div class="wrapper">
+            <div class="content"> </div>
+        </div>
+
+
+    <!-- 2.margin合并   选择不解决-->  
+        <span class="box1">123</span>
+        <span class="box2">456</span>
+    <!-- 不推荐 -->
+        <div class="dome1">1</div>
+        <div class="wra">
+                <div class="dome2">2</div>
+        </div>
+        
+
+
+    <!-- float:left/right   浮动模型  -->
+
+     
+
+    <div class="ppr">
+        <div class="con">1</div>
+        <div class="con">2</div>
+        <div class="con">3</div>
+        <!-- <p></p> -->
+    </div>
+
+    <!-- 1.浮动元素产生了浮动流
+    所有产生了浮动流的元素，块级元素看不到他们
+    产生了bfc的元素和文本类属性（inline）的元素以及文本都能看到浮动元素 -->
+
+    <!-- 扩展 -->
+    <!-- 凡设置了postion:abolute; float:left/right;
+    打内容吧元素转换成了inline-block（行级快元素）； -->
+
+
+    <div class="boxx"></div>
+    <div class="boxx2"></div>   
+
+</body>
+</html>

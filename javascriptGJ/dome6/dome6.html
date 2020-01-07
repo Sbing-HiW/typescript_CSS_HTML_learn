@@ -1,0 +1,294 @@
+<html>
+    <head>
+<meta charset="utf-8">
+<title>dome6</title>
+<link rel="stylesheet" href="dome6.css">
+<script src="dome6.js"></script>
+    </head>
+    <body>
+      
+<!-- 第四部分 客户端JavaScript 手册  HTML格式 -->
+
+<!-- 1. Anchor 超文本连接目标 -->
+<a  name = "name"> text </a>
+
+<!-- 2. Applet 嵌入网页的小程序 -->
+
+<!-- 3. Area 参考Link -->
+
+<!-- 4.Button 图形化按钮 -->
+<!-- html -->
+<form>按钮
+    <input type="button" value="button" onclick=" username = prompt('your name')"  name="name">
+</form>
+<!-- html5 -->
+<button id = "name" onclick="">button</button>
+
+<!-- 5.Checkbox 图形化复选框 -->
+<form>复选框
+    <input type="checkbox" name="name" value="value" onclick="alert('复选框')">
+</form>
+
+<!-- 18. Document.lastModified  文档的最后修改的日期 -->
+<script>
+if(Date.parse(document.lastModified) != 0){
+    document.write('<p><hr><small><i> Last modified : '+ document.lastModified + '</i></small></p>')
+}
+</script>
+
+<!-- 23. Document.URL 当前文档的URL -->
+<script>
+document.write('<hr><small><i>URL:'+document.URL+'<i></small>')
+</script>
+
+<!-- 30 FileUpload 表单输入元素中的文件上载域 -->
+<form method="post">...
+<input type="file" name="name" size="integer" maxlength="integer" onblur="" onchange="handler" onfocus="">...
+</form>
+
+<!-- 31 Form 表单 -->
+<form action="" enctype="" method="POST" name="form" target="_blank">
+    <input type="reset" value="1">
+    <input type="submit" value="2">
+</form>
+
+<!-- 34 Hidden 用于客户端/服务端通信的隐藏数据 -->
+<form>
+    <input type="hidden" name="hidden" value="hidden">...
+</form>
+
+<!-- 38.21 input.type 表单元素的类型  -->
+<input type="button" value="button">
+<br>
+<input type="checkbox" name="checkbox" id="">
+<br>
+<input type="file" name="FileUpload" id="">
+<br>
+<input type="hidden" name="hidden">
+<br>
+<input type="password" name="password" id="">
+<br>
+<input type="radio" name="radio" id="1">
+<input type="radio" name="radio" id="2">
+<input type="radio" name="radio" id="3">
+<br>
+<input type="reset" value="reset">
+<br>
+<select name="select" id="">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+</select>
+<br>
+<input type="submit" value="submit">
+<br>
+<input type="text" name="text" id="">
+<br>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+
+<!-- 41 Layer HTML文档中的一个独立层 -->
+<!-- 无法创建<LAyer> -->
+
+<!-- 42 Link 超文本链接  -->
+<!-- 42.1 hash -->
+<a name="hash"></a>
+<!-- 42.4 href -->
+<a href="www.baidu.com">www.baidu.com</a>
+<!-- 42.9 target -->
+<a href="" target="_blank"></a>
+<!-- 42.10 text -->
+<a href="#" target="_blank">chongxindakai</a>
+<!-- 42.11 onclick -->
+<a href="#" onclick="alert('用户点击')">用户点击</a>
+<!-- 42.12 onmouseout -->
+<a href="#" onmouseout="alert('用户移出')">用户点击</a>
+<!-- 42.13 onmouseover -->
+<a href="#" onmouseover="alert('用户移入')">用户移入</a>
+
+<!-- 46 Option Select框中的一个选项 -->
+<form action="">
+    <select name="" id="">
+        <option value="1" >3</option>
+        <option value="1">2</option>
+        <option value="1" selected >1</option>
+    </select>
+</form>
+
+<!-- 47 Password 用于敏感数据的文本输入框 -->
+<div name="">
+    <form action="">
+            <input type="password" name="" id="">
+    </form>
+</div>
+
+<!-- 49 Radio 单选框按钮 -->
+<div>
+    <form action="">
+        <ul>
+            <input type="radio" name="1" id="" value="1">
+            <input type="radio" name="1" id="" value="2">
+            <input type="radio" name="1" id="" value="3">
+        </ul>
+    </form>
+</div>
+
+<!-- 50 Reset 重置表单值的按钮 -->
+<div>
+    <form action="">
+        <input type="text" name="" id="" value="">
+        <input type="reset" value="reset">
+    </form>
+</div>
+
+<!-- 54 Subimt 提交表单的按钮 -->
+<div>
+    <form action="" method="POST">
+        <input type="text" name="" id="">
+        <input type="password" name="" id="">
+        <input type="submit" value="提交">
+    </form>
+</div>
+
+<!-- 56 Textarea 多行本文输入框 -->
+<div>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+</div>
+
+
+<!-- 第五部分 W3C DOM 手册  HTML格式 -->
+<!-- 54 HTMLElement 所有HTML元素的基础接口 -->
+<a href="">a</a>
+<applet>applet</applet>
+<area shape="" coords="" href="" alt="">area
+<base href="">base
+<basefont>basefont
+<blockquote>blockquote</blockquote>
+<q>q</q>
+<!-- <body></body> -->
+<br>br
+<button>button</button>
+<caption>caption</caption>
+<col>col
+<colgroup>colgroup</colgroup>
+<del>del</del>
+<ins>ins</ins>
+<dir>dir</dir>
+<div>div</div>
+<dl>dl</dl>
+<fieldset>fieldset</fieldset>
+<font>font</font>
+<form action="">form</form>
+<frame>frame
+<frameset>frame</frameset>
+<h1>h1</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+<h4>h4</h4>
+<h5>h5</h5>
+<h6>h6</h6>
+<head>head</head>
+<hr>hr
+<!-- <html></html> -->
+<iframe src="" frameborder="0">iframe</iframe>
+<img src="" alt="">img
+<input type="text">input
+<ins>ins</ins>
+<isindex>isindex
+<label for="">label</label>
+<legend>legend</legend>
+<li>li</li>
+<link rel="stylesheet" href="">link
+<map name="">map</map>
+<menu>menu</menu>
+<meta>meta
+<object data="" type="">object</object>
+<ol>ol</ol>
+<optgroup>optgroup</optgroup>
+<option value="">option</option>
+<p>p</p>
+<param name="" value="">param
+<pre>pre</pre>
+<q>q</q>
+<script></script>
+<select name="" id="">select</select>
+<style></style>
+<table>table</table>
+<tbody>tbody</tbody>
+<tfoot>tfoot</tfoot>
+<thead>thead</thead>
+<td>td</td>
+<th>th</th>
+<textarea name="" id="" cols="30" rows="10">textarea</textarea>
+<title>title</title>
+<tr>tr</tr>
+
+<!-- 56 HTMLInputElement HTML表单中的输入元素 -->
+<form action="">
+   <input type="button" value="">
+   <input type="checkbox" name="" id="">
+   <input type="file" name="" id="">
+   <input type="hidden" name="">
+   <input type="image" src="" alt="">
+   <input type="password" name="" id="">
+   <input type="radio" name="" id="">
+   <input type="reset" value="">
+   <input type="text" name="" id="">
+   <input type="submit" value="">
+</form>
+
+<!-- 
+    57 HTMLOptionElement HTML表单中的<select>元素中的<option>元素 
+    58 HTMLSelectElement HTML表单中的<select>元素
+-->
+<form action="">
+    <select name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+</form>
+
+<!--
+     59 HTMLTableCaptionElement HTML表中的<caption>元素
+     60 HTMLTableCellElement HTML表中的<td><th>元素
+         <td> 元素中的文本通常是普通的左对齐文本
+             <th> 元素中的文本通常呈现为粗体并且居中。
+-->
+<table border="1">
+    <caption>Monthly savings</caption>
+    <tr>
+        <th>Mo</th>
+        <th>Sa</th>
+    </tr>
+    <tr>
+        <td>Jan</td>
+        <td>$100</td>
+    </tr>
+</table>
+
+<!-- 61 HTMLTableColElement HTML表中的<col><cokgroup>元素 -->
+<table border="2">
+        <colgroup>
+          <col span="1" style="background-color:red">
+          <col style="background-color:yellow">
+        </colgroup>
+        <tr>
+          <th>ISBN</th>
+          <th>Title</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>3476896</td>
+          <td>My first HTML</td>
+          <td>$53</td>
+        </tr>
+</table>
+      
+    
+
+
+
+
+
+    </body>
+</html>

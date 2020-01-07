@@ -1,0 +1,610 @@
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> -->
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>jQuery2-使用jQuery操作元素的属性与样式</title>
+      <script src="../jquery-1.3.2-vsdoc2.js"></script>
+      <link rel="stylesheet" href="jq2.css">
+    </head>
+    <body>
+        <img src="images/image.1.jpg" id="hibiscus" alt="Hibiscus" class="classA"><img src="images/image.1.jpg" id="hibiscus1" alt="Hibiscus1" class="classA"><img src="images/image.1.jpg" id="hibiscus2" alt="Hibiscus2" class="classA"><img src="images/image.1.jpg" id="hibiscus3" alt="Hibiscus3" class="classA">
+    <!-- 区分DOM属性和元素属性 -->
+    <!-- <script>   
+    $(function() {
+            var img1 = document.getElementById("hibiscus");
+            alert(img1.alt);
+            img1.alt = "Change the alt element attribute";
+            alert(img1.alt);
+            // img1.className = "classB";
+        })
+    </script> -->
+    
+    <!-- 操作"DOM属性" -->
+    <!-- <script>
+     $("img").each(function(index) {
+                alert("index:" + index + ", id:" + this.id + ", alt:" + this.alt);
+                this.alt = "changed";
+                alert("index:" + index + ", id:" + this.id + ", alt:" + this.alt);
+            });
+    </script> -->
+    
+    <!-- 操作元素属性 -->
+    <!-- <script>
+    // attr(name)
+    
+    // 取得第一个匹配元素的属性值。通过这个方法可以方便地从第一个匹配
+    // 元素中获取一个属性的值。如果元素没有相应属性，则返回 undefined 。
+    
+    //返回文档中第一个图像的src属性值: $("img").attr("src");
+    function testAttr1(event) {
+     alert($("#hibiscus").attr("class"));
+    }
+    testAttr1(event);
+
+    
+    // attr( properties )
+
+    // 将一个“名/值”形式的对象设置为所有匹配元素的属性。
+    
+    // 为所有图像设置src和alt属性: $("img").attr({ src: "test.jpg", alt: "Test Image" });
+    $("img").attr({title:"修改后的title", alt: "同时修改alt属性"});
+
+
+    
+    
+    // attr( key, value )
+
+    // 为所有匹配的元素设置一个属性值。
+
+    // 为所有图像设置src属性: $("img").attr("src","test.jpg");
+
+    //修改所有img元素的alt属性
+    $("img").attr("alt", "修改后的alt属性");
+
+
+
+    // attr( key, fn )
+
+    // 为所有匹配的元素设置一个计算的属性值。 
+    // 不提供值，而是提供一个函数，由这个函数计算的值作为属性值。
+
+    // 把src属性的值设置为title属性的值: $("img").attr("title", function() { return this.src });
+    
+    
+    
+    
+    // removeAttr( name )
+
+    // 从每一个匹配的元素中删除一个属性
+
+    // 将文档中图像的src属性删除: $("img").removeAttr("src");
+    $("#inputTest").removeAttr("readonly");
+    </script> -->
+    
+    
+        <p>selected1</p><p>selected2</p><p>selected3</p>
+        <input type="button" value="点击更换class" id="btnAdd">
+    <!-- 修改CSS类 -->
+    <!-- <script>
+    
+    // addClass(classes)
+
+    // 为每个匹配的元素添加指定的类名。
+
+    // 为匹配的元素加上 'selected' 类: 
+    $("p").addClass("selected");
+    alert(document.getElementsByClassName("selected").length);
+
+
+
+    
+    // hasClass( class )
+    
+    // 判断包装集中是否至少有一个元素应用了指定的CSS类
+    alert( $("p").hasClass("selected"));
+    
+    
+    
+
+    // removeClass( [classes] )
+    
+    // 从所有匹配的元素中删除全部或者指定的类。
+    
+    // 从匹配的元素中删除 'selected' 类: 
+    $("p").removeClass("selected");
+    
+    
+    
+
+    // toggleClass( class )
+
+    // 如果存在（不存在）就删除（添加）一个类。
+
+    // 为匹配的元素切换 'selected' 类: 
+    $("p").toggleClass("selected");
+
+
+
+
+    // toggleClass( class, switch )
+
+    // 当switch是true时添加类,当switch是false时删除类
+
+    // 每三次点击切换高亮样式:
+    var count = 0;
+    $("p").click(function(){
+      $(this).toggleClass("highlight", count++ % 3 == 0); 
+    });
+
+
+
+    $("#btnAdd").bind("click", function(event) { $("p").addClass("colorRed borderBlue"); });
+
+
+
+    
+    
+    
+    </script> -->
+    
+    
+    <!-- 修改CSS样式 -->
+    <!-- <script>
+    
+    // css( name )
+
+    // 访问第一个匹配元素的样式属性。
+
+    // 取得第一个段落的color样式属性的值:
+    alert( $("p").css("color"));
+    
+    
+    
+    
+    // css( properties )
+
+    // 把一个“名/值对”对象设置为所有匹配元素的样式属性。
+
+    // 将所有段落的字体颜色设为红色并且背景为蓝色:
+    $("p").css({ color: "#005511", background: "blue" });
+    
+    
+    
+    
+    
+    // css( name, value )
+
+    // 在所有匹配的元素中，设置一个样式属性的值。数字将自动转化为像素值
+
+    // 将所有段落字体设为红色:
+
+    $("p").css("color","red");
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script> -->
+    
+    
+
+        <div id="testDiv" ></div>
+    <!-- 获取常用属性 -->
+    <!-- <script>
+    $(function()
+        {
+            alert("attr(\"width\"):" + $("#testDiv").attr("width")); //undifined
+            alert("css(\"width\"):" + $("#testDiv").css("width")); //auto(ie6) 或 1264px(ff)
+            alert("width():" + $("#testDiv").width()); //正确的数值1264
+            alert("style.width:" +  $("#testDiv")[0].style.width ); //空值
+        })
+    </script> -->
+    
+    <!-- 宽和高相关 -->
+    <!-- <script>
+    
+    // height() 
+
+    // 取得第一个匹配元素当前计算的高度值（px）。
+
+    // 获取第一段的高:
+    alert( $("p").height());
+
+
+
+
+    // height( val )
+
+    // 为每个匹配的元素设置CSS高度(hidth)属性的值
+    
+    // 把所有段落的高设为 20:
+    $("p").height(20);
+    alert( $("p").height());
+    
+
+
+
+    //width( )    
+    
+    // 取得第一个匹配元素当前计算的宽度值（px）。  
+
+    // 获取第一段的宽:
+    $("p").width();
+
+
+
+
+    // width( val )
+
+    // 为每个匹配的元素设置CSS高度(hidth)属性的值
+    
+    // 把所有段落的高设为 20:
+    $("p").width(20);
+    alert( $("p").width());
+
+
+
+
+    // innerHeight( )
+    // 获取第一个匹配元素内部区域高度（包括补白、不包括边框）。
+
+    // innerWidth( )
+    // 获取第一个匹配元素内部区域宽度（包括补白、不包括边框）。
+    
+    // outerHeight( [margin] )
+    // 获取第一个匹配元素外部高度（默认包括补白和边框）。
+
+    // outerWidth( [margin] )
+    // 获取第一个匹配元素外部宽度（默认包括补白和边框）。
+
+    // outerWith可以接受一个bool值参数表示是否计算margin值. 
+
+
+    </script> -->
+
+    <!-- 位置相关 -->
+    <!-- <script>
+    
+    // offset( )
+
+    // 获取匹配元素在当前窗口的相对偏移。
+    // 返回的对象包含两个整形属性：top 和 left。此方法只对可见元素有效。
+
+    // 获取第二段的偏移:
+    var p = $("p:last");
+    var offset = p.offset();
+    p.html( "left: " + offset.left + ", top: " + offset.top );
+    
+    
+
+    // position( )
+    
+    // 获取匹配元素相对父元素的偏移。
+    // 返回的对象包含两个整形属性：top 和 left。
+
+    // 获取第一段的偏移:
+    var p = $("p:first");
+    var position = p.position();
+    $("p:last").html( "left: " + position.left + ", top: " + position.top );
+    
+
+
+
+    // scrollTop( )
+
+    // 获取匹配元素相对滚动条顶部的偏移。
+
+    // 获取第一段相对滚动条顶部的偏移:
+    var p = $("p:first");
+    $("p:last").text( "scrollTop:" + p.scrollTop() );
+
+
+
+
+    // scrollTop( val )
+
+    // 传递参数值时，设置垂直滚动条顶部偏移为该值。
+
+    // 设定垂直滚动条值:
+    $("div.demo").scrollTop(300);
+
+
+
+
+
+    // scrollLeft( )
+
+    // 获取匹配元素相对滚动条左侧的偏移。
+
+    // 获取第一段相对滚动条左侧的偏移:
+    var p = $("p:first");
+    $("p:last").text( "scrollLeft:" + p.scrollLeft() )
+
+
+    // scrollLeft( val )
+
+    // 传递参数值时，设置水平滚动条左侧偏移为该值。
+
+    // 设置相对滚动条左侧的偏移:
+    $("div.demo").scrollLeft(300);
+
+
+
+
+
+
+    
+    </script> -->
+
+
+
+    <!-- jQuery中的事件 -->
+
+    <div>
+        <text name="" id="testDiv4"  cols="30" rows="10">jquery</textarea>
+    </div>
+    <!-- 添加事件 -->
+    <!-- <script>
+    
+    $("#testDiv4").bind("click", function(event) { alert("one"); });
+    $("#testDiv4").bind("click", function(event) { alert("two"); });
+    
+    </script> -->
+
+
+    <!-- 事件处理 -->
+    <!-- <script>
+    // bind( type, [data], fn )
+
+    // 为每一个匹配元素的特定事件（像click）绑定一个事件处理器函数。
+
+    // 当每个段落被点击的时候，弹出其文本:
+    $("p").bind("click", function(){alert( $(this).text() );});
+  
+
+
+    
+    // one( type, [data], fn )
+
+    // 为每一个匹配元素的特定事件（像click）绑定一个一次性的事件处理函数。
+
+    // 当所有段落被第一次点击的时候，显示所有其文本:
+    $("p").one("click", function(){alert( $(this).text() );});
+
+
+
+    // trigger( event, [data] )
+
+    // 在每一个匹配的元素上触发某类事件。这个函数也会导致浏览器同名的默认行为的执行。
+    // 比如，如果用trigger()触发一个'submit'，则同样会导致浏览器提交表单。
+    // 如果要阻止这种默认行为，应返回false。 你也可以触发由bind()注册的自定义事件
+
+    // 给一个事件传递参数:
+    $("p").click( function (event, a, b) {} ).trigger("click", ["foo", "bar"]);
+
+
+    
+    
+    // triggerHandler( event, [data] )
+
+    // 这个特别的方法将会触发指定的事件类型上所有绑定的处理函数。但不会执行浏览器默认动作.
+
+    
+    
+    
+    // unbind( type, fn )
+
+    // bind()的反向操作，从每一个匹配的元素中删除绑定的事件。
+
+
+
+    
+    
+    
+    
+    </script> -->
+
+    <!-- <div class="outer" id="outer1">
+            Outer 1
+            <div class="inner" id="inner1">Inner 1</div>
+          </div>
+          <div class="outer" id="outer2">
+            Outer 2
+            <div class="inner" id="inner2">Inner 2</div>
+          </div>
+    <div id="console"></div> -->
+
+
+    <!-- toggle函数 -->
+    <!-- <ul>
+            <li style="cursor:pointer">click me</li>
+    </ul>
+    <script>
+     $(function()
+        {
+            $("li").toggle(
+              function()
+              {
+                  $(this).css({ "list-style-type": "disc", "color": "blue" });
+              },
+              function()
+              {
+                  $(this).css({ "list-style-type": "square", "color": "red" });
+              },
+              function()
+              {
+                  $(this).css({ "list-style-type": "none", "color": "" });
+              }
+            );
+        })
+    </script> -->
+
+    
+
+    <!-- 使用jQuery对象 -->
+
+    <a href="">使用jQuery对象</a>
+    <!-- <script>
+    // type
+
+    // 事件类型.如果使用一个事件处理函数来处理多个事件, 可以使用此属性获得事件类型,比如click.
+    $("a").click(function(event) {
+    alert(event.type);
+    });
+
+
+    // target
+
+    // 获取事件触发者DOM对象
+    $("a[href=http://google.com]").click(function(event) {
+     alert(event.target.href);
+    });
+
+
+
+    // data
+
+    // 事件调用时传入额外参数.
+    $("a").each(function(i) {
+      $(this).bind('click', {index:i}, function(e){
+      alert('my index is ' + e.data.index);
+      });
+    });
+
+
+
+    // relatedTarget
+
+    // 对于鼠标事件, 标示触发事件时离开或者进入的DOM元素
+    $("a").mouseout(function(event) {
+      alert(event.relatedTarget);
+    });
+
+
+
+    // currentTarget
+
+    // 冒泡前的当前触发事件的DOM对象, 等同于this.
+    $("p").click(function(event) {
+      alert( event.currentTarget.nodeName );
+    });
+    
+
+    // pageX/Y
+
+    // 鼠标事件中, 事件相对于页面原点的水平/垂直坐标.
+    $("a").click(function(event) {
+     alert("Current mouse position: " + event.pageX + ", " + event.pageY );
+    });
+
+
+
+    // result
+
+    // 上一个事件处理函数返回的值
+    $("p").click(function(event) {
+      return "hey"
+    });
+    $("p").click(function(event) {
+      alert( event.result );
+    });
+
+
+
+    // timeStamp
+
+    // 事件发生时的时间戳.
+    var last;
+    $("p").click(function(event) {
+       if( last )
+       alert( "time since last event " + event.timeStamp - last );
+       last = event.timeStamp;
+    });
+
+
+
+
+
+    // jQuery事件对象的函数列表
+
+    // preventDefault()
+
+    // 取消可能引起任何语意操作的事件. 比如<a>元素的href链接加载, 表单提交以及click引起复选框的状态切换.
+    $("a").click(function(event){
+      event.preventDefault();
+    // do something
+    });
+
+
+
+
+    // isDefaultPrevented()
+
+    // 是否调用过preventDefault()方法
+    $("a").click(function(event){
+     alert( event.isDefaultPrevented() );
+     event.preventDefault();
+     alert( event.isDefaultPrevented() );
+    });
+
+
+
+    // stopPropagation()
+
+    // 取消事件冒泡
+    $("p").click(function(event){
+     event.stopPropagation();
+     // do something
+    });
+
+
+
+
+    // isPropagationStopped()
+
+    // 是否调用过stopPropagation()方法
+    $("p").click(function(event){
+     alert( event.isPropagationStopped() );
+     event.stopPropagation();
+     alert( event.isPropagationStopped() );
+    });
+
+
+
+    // stopImmediatePropagation()
+
+    // 取消执行其他的事件处理函数并取消事件冒泡.
+    $("p").click(function(event){
+      event.stopImmediatePropagation();
+    });
+    $("p").click(function(event){
+    // This function won't be executed
+    });
+
+
+
+    // isImmediatePropagationStopped()
+
+    // 是否调用过stopImmediatePropagation()
+    $("p").click(function(event){
+     alert( event.isImmediatePropagationStopped() );
+     event.stopImmediatePropagation();
+     alert( event.isImmediatePropagationStopped() );
+    });
+
+
+    
+    
+    </script> -->
+
+
+
+    
+    </body>
+</html>

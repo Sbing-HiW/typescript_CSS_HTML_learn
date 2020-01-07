@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.one {
+    /* float: left; */
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    background-image: url('233.png');
+    background-size: 100px 100px;
+    /* background-position: 10px 10px ; */
+    /* border: 100px solid red; */
+    margin-top: 100px;
+    border-top-color: aliceblue;
+    border-right-color: aliceblue;
+    border-left-color: aliceblue;
+    /* padding: 10; */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    line-height: 100px;
+    /* text-transform: uppercase; */
+    font-style: italic;
+
+ 
+    text-indent: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* visibility: hidden; */
+
+
+    /* line-break: auto */
+    /* border-bottom-style: none; */
+    /* border-top: 500px; */
+    /* border-collapse: collapse; */
+    /* background-repeat: inherit; */
+    /* background-attachment: inherit; */
+}
+.postion{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    /* position: relative; */
+    margin: 100px;
+    position: fixed;
+    overflow: hidden;
+    /* overflow: scroll; */
+
+    /* display: none; */
+    /* visibility: hidden; */
+
+}
+.postion .postiontow{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    /* position: fixed; */
+    /* position: relative; */
+    position: relative;
+    left: 10px;
+    z-index: 1;
+    
+}
+.postion .postionthree{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    /* position: fixed; */
+    /* position: relative; */
+    position: absolute;
+    left: 15px;
+    top: -10px;
+    z-index: 0;
+
+}
+
+
